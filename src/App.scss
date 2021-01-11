@@ -9,8 +9,10 @@ $color-2: #ffdbca;
 
 body {
   font-family: Alegreya, serif;
-  background: linear-gradient(to left, $color-1, $color-2);
+  overflow-x: hidden;
+  // background: linear-gradient(to left, $color-1, $color-2);
 }
+
 .header {
   //setting up first grid. 
   display: grid;
@@ -43,4 +45,32 @@ body {
 .menu-item:last-of-type{
   color: #ff7676;
   border-bottom:4px solid #f8d1be;
+}
+
+
+// hero
+
+.container{
+  max-width: 1500px;
+}
+
+.hero_container{
+  position: relative;
+  min-width: 550px;
+  display: grid;
+  grid-template-areas:
+  "lamp title sun sun"
+  "lamp title sun sun"
+  ;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,minmax(0px,auto));
+  border-bottom:1px solid #ff8989 ;
+
+}
+
+.lamp{
+  grid-area: lamp;
+  height: auto;
+  justify-self: end;
+  align-self:end ;
 }
